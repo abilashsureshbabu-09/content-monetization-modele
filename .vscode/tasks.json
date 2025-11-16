@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Streamlit App",
+			"type": "shell",
+			"command": "streamlit run app/streamlit_app.py",
+			"isBackground": true
+		},
+		{
+			"label": "Run Streamlit App on Port 8503",
+			"type": "shell",
+			"command": "streamlit run app/streamlit_app.py --logger.level=info",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start YouTube Revenue Predictor",
+			"type": "shell",
+			"command": "streamlit run app/streamlit_app.py --logger.level=info",
+			"isBackground": true
+		},
+		{
+			"label": "Start YouTube Revenue Predictor",
+			"type": "shell",
+			"command": "streamlit run app/streamlit_app.py --logger.level=info",
+			"isBackground": true
+		},
+		{
+			"label": "Run Streamlit with Virtual Env",
+			"type": "shell",
+			"command": "/Users/abilashsureshbabu/Downloads/Content_Monetization_Modeler_updated/.venv/bin/streamlit run app/streamlit_app.py --logger.level=info",
+			"isBackground": true
+		}
+	]
+}
