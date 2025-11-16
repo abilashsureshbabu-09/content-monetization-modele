@@ -6,12 +6,19 @@ import numpy as np
 import joblib
 import os
 import sys
+import traceback
 
 # Add parent directory to path so we can import src
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.data_processing import feature_engineering
-from src.youtube_fetch import extract_video_id, fetch_video_metadata, fetch_channel_subscribers, build_feature_row_from_video, fetch_category_map
+try:
+
+try:
+    from src.data_processing import feature_engineering
+    from src.youtube_fetch import extract_video_id, fetch_video_metadata, fetch_channel_subscribers, build_feature_row_from_video, fetch_category_map
+except ImportError as e:
+    st.error(f"Import Error: {e}")
+    st.stop()
 
 st.set_page_config(page_title='YouTube Revenue Predictor', layout='centered')
 st.title('YouTube Ad Revenue Predictor')
